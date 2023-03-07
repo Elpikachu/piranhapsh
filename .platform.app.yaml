@@ -1,0 +1,29 @@
+name: app
+type: dotnet:6.0
+
+relationships:
+    database: "db:mysql"
+
+web:
+    commands:
+        start: 'dotnet .dll'
+    locations:
+        "/":
+            root: "wwwroot"
+            allow: true
+            passthru: true
+            rules:
+                \.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$:
+                    allow: true
+                    expires: 120s
+
+hooks:
+    set -xe
+    dotnet publish --output "$PLATFORM_OUTPUT_DIR" -p:UserRazorBuildServer=false -pUseSharedCompilation=false
+
+mounts:
+    "/wwwroot/assets":
+        source: local
+        source_path: "wwwroot/assets"
+
+disk: 512
