@@ -29,5 +29,8 @@ mounts:
     "/database":
         source: local
         source_path: "database"
+    "/wwwroot/uploads":
+        source: local
+        source_path: "wwwroot/uploads"
 
 disk: 512
