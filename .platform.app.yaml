@@ -26,5 +26,8 @@ mounts:
     "/wwwroot/assets":
         source: local
         source_path: "wwwroot/assets"
+    "/database":
+        source: local
+        source_path: "database"
 
 disk: 512
