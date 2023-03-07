@@ -20,7 +20,7 @@ web:
 hooks:
     build: |
         set -xe
-        dotnet publish --output "$PLATFORM_OUTPUT_DIR" -p:UserRazorBuildServer=false -pUseSharedCompilation=false
+        dotnet publish --output "$PLATFORM_OUTPUT_DIR" -p:UserRazorBuildServer=false -p:UseSharedCompilation=false
 
 mounts:
     "/wwwroot/assets":
