@@ -6,7 +6,7 @@ relationships:
 
 web:
     commands:
-        start: 'dotnet .dll'
+        start: 'dotnet piranhademo.dll'
     locations:
         "/":
             root: "wwwroot"
@@ -18,8 +18,9 @@ web:
                     expires: 120s
 
 hooks:
-    set -xe
-    dotnet publish --output "$PLATFORM_OUTPUT_DIR" -p:UserRazorBuildServer=false -pUseSharedCompilation=false
+    build: |
+        set -xe
+        dotnet publish --output "$PLATFORM_OUTPUT_DIR" -p:UserRazorBuildServer=false -pUseSharedCompilation=false
 
 mounts:
     "/wwwroot/assets":
