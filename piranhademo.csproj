@@ -9,6 +9,7 @@
     <PackageReference Include="Piranha" Version="10.3.0" />
     <PackageReference Include="Piranha.AspNetCore" Version="10.3.0" />
     <PackageReference Include="Piranha.AspNetCore.Identity.MySQL" Version="10.3.0" />
+    <PackageReference Include="Piranha.AspNetCore.Identity.PostgreSQl" Version="10.3.0" />
     <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="10.3.0" />
     <PackageReference Include="Piranha.AttributeBuilder" Version="10.3.0" />
     <PackageReference Include="Piranha.Data.EF.MySql" Version="10.3.0" />
