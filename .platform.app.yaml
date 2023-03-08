@@ -2,7 +2,7 @@ name: app
 type: dotnet:6.0
 
 relationships:
-    database: "db:mysql"
+    database: "db:postgresql"
 
 web:
     commands:
